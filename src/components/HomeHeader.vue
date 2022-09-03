@@ -181,7 +181,6 @@
   import { mapState, mapActions, mapGetters } from 'vuex'
   import { Button, Input, Badge, Dropdown, DropdownMenu, DropdownItem, MessageBox, Checkbox } from 'element-ui'
   import Event from '@/utils/event'
-  import popup from '@/utils/popup'
   import { inIframe } from '@/utils'
   import notie from 'notie'
   import {
@@ -302,14 +301,6 @@
             text: 'Token',
             handler: () => {
               this.promptGitHubToken()
-            }
-          }, {
-            text: 'OAuth',
-            type: 2,
-            handler: () => {
-              const loginURL = process.env.NODE_ENV === 'development' ? 'http://localhost:4001/login' : 'https://gh-login.codepan.net/login'
-
-              popup(loginURL, 'gh login', 600, 400)
             }
           }]
         })
