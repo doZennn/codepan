@@ -307,7 +307,14 @@
       },
       promptGitHubToken() {
         notie.input({
-          text: 'Please set your personal access token for GitHub Gist',
+          placeholder: 'ghp_',
+          text: `
+          Please set your personal access token for GitHub Gist:
+          <br />
+          <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>
+          <br />Only selecting the "gist" scope is recommended.
+          <br />Token is stored locally in your browser.
+          `,
           submitCallback: value => {
             this.$store.dispatch('setGitHubToken', value)
             notie.alert({
