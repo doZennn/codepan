@@ -98,7 +98,7 @@ async function loadCoffeeScript2() {
   await Promise.all([
     asyncLoad(
       [
-        '/vendor/coffeescript-2.js',
+        '/vendor/coffeescript-2.7.0.js',
         // Need babel to transform JSX
         process.env.BABEL_CDN
       ],

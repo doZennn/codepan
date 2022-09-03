@@ -12,10 +12,11 @@
         </el-button>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item command="empty">Empty</el-dropdown-item>
+          <el-dropdown-item command="react">React</el-dropdown-item>
+          <el-dropdown-item command="react-jsx">React JSX</el-dropdown-item>
+          <el-dropdown-item command="preact">Preact</el-dropdown-item>
           <el-dropdown-item command="vue">Vue</el-dropdown-item>
           <el-dropdown-item command="vue-jsx">Vue JSX</el-dropdown-item>
-          <el-dropdown-item command="react">React</el-dropdown-item>
-          <el-dropdown-item command="preact">Preact</el-dropdown-item>
           <el-dropdown-item command="rxjs">RxJS</el-dropdown-item>
           <el-dropdown-item command="hyperapp">Hyperapp</el-dropdown-item>
           <el-dropdown-item command="es-import">ES import</el-dropdown-item>
