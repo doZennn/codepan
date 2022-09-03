@@ -96,10 +96,10 @@
   height: 100%
   top: 0
   right: 0
-  border-right: 1px solid #e2e2e2
+  border-right: 2px solid #232830
   z-index: 1000
 
   &.enable:hover
     cursor: move
-    border-right: 1px dashed #39f
+    border-right: 2px dashed #39f
 </style>

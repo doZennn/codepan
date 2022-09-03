@@ -94,11 +94,12 @@
   overflow: auto
 
 .console-log
+  color: #d7d7db
   white-space: pre
   font-size: 13px
   padding: 10px
-  border-bottom: 1px solid #efefef
+  border-bottom: 1px solid #383f4d
 
 .console-log-error
-  color: red
+  color: #bf563e
 </style>

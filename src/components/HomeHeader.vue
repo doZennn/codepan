@@ -94,7 +94,7 @@
         plain
         :disabled="editorStatus === 'saving'"
         :title="saveButtonTitle"
-        v-tippy="{position: 'bottom'}"
+        v-tippy="{position: 'bottom',theme: 'light'}"
         class="home-header-right-item"
         @click="saveGist">
         Save
@@ -118,7 +118,7 @@
               plain
               :disabled="editorStatus === 'saving'"
               :title="saveButtonTitle"
-              v-tippy="{position: 'bottom'}"
+              v-tippy="{position: 'bottom',theme: 'light'}"
               @click="saveGist">
               Save
             </el-button>
@@ -153,7 +153,7 @@
             :disabled="editorStatus === 'saving'"
             command="save-new-gist"
             title="Create a new gist from editor"
-            v-tippy="{position: 'left',arrow: true}"
+            v-tippy="{position: 'left',arrow: true,theme: 'light'}"
             v-if="canUpdateGist">
             <div class="fake-anchor">
               <git-branch-icon></git-branch-icon> Save new
@@ -188,7 +188,6 @@
     GitBranchIcon,
     Link2Icon,
     SaveIcon,
-    TwitterIcon,
     LogOutIcon,
     InfoIcon
   } from 'vue-feather-icons'
@@ -338,7 +337,6 @@
       GitBranchIcon,
       Link2Icon,
       SaveIcon,
-      TwitterIcon,
       SvgIcon,
       LogOutIcon,
       InfoIcon

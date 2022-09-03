@@ -21,6 +21,7 @@ const isMac = CodeMirror.keyMap.default === CodeMirror.keyMap.macDefault
 
 export default function (el, opts = {}) {
   const editor = CodeMirror.fromTextArea(el, {
+    theme: 'base16-ocean-dark',
     lineNumbers: true,
     lineWrapping: true,
     styleActiveLine: true,

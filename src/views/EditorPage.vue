@@ -195,6 +195,41 @@ export default {
 
 </style>
 
+<style lang="css">
+  .cm-s-base16-ocean-dark.CodeMirror { background: transparent; color: #dfe1e8; }
+  .cm-s-base16-ocean-dark div.CodeMirror-selected { background: #4f5b66; }
+  .cm-s-base16-ocean-dark .CodeMirror-line::selection, .cm-s-base16-ocean-dark .CodeMirror-line > span::selection, .cm-s-base16-ocean-dark .CodeMirror-line > span > span::selection { background: rgba(48, 48, 48, .99); }
+  .cm-s-base16-ocean-dark .CodeMirror-line::-moz-selection, .cm-s-base16-ocean-dark .CodeMirror-line > span::-moz-selection, .cm-s-base16-ocean-dark .CodeMirror-line > span > span::-moz-selection { background: rgba(48, 48, 48, .99); }
+  .cm-s-base16-ocean-dark .CodeMirror-gutters { background: #2b303b; border-right: 0px; }
+  .cm-s-base16-ocean-dark .CodeMirror-guttermarker { color: #c6c6c6; }
+  .cm-s-base16-ocean-dark .CodeMirror-guttermarker-subtle { color: #c6c6c6; }
+  .cm-s-base16-ocean-dark .CodeMirror-linenumber { color: #65737e; }
+  .cm-s-base16-ocean-dark .CodeMirror-activeline .CodeMirror-linenumber { color: #c6c6c6; }
+  .cm-s-base16-ocean-dark .CodeMirror-cursor { border-left: 2px solid #a7adba; }
+
+  .cm-s-base16-ocean-dark span.cm-comment { color: #65737e; }
+  .cm-s-base16-ocean-dark span.cm-atom { color: #b48ead; }
+  .cm-s-base16-ocean-dark span.cm-number { color: #D08770; }
+
+  .cm-s-base16-ocean-dark span.cm-property { color: #8fa1b3; }
+  .cm-s-base16-ocean-dark span.cm-attribute { color: #bf616a; }
+  .cm-s-base16-ocean-dark span.cm-keyword { color: #b48ead; }
+  .cm-s-base16-ocean-dark span.cm-string { color: #a3be8c; }
+
+  .cm-s-base16-ocean-dark span.cm-variable { color: #bf616a; }
+  .cm-s-base16-ocean-dark span.cm-variable-2 { color: #bf616a; }
+  .cm-s-base16-ocean-dark span.cm-variable-3 { color: #D08770; }
+  .cm-s-base16-ocean-dark span.cm-def { color: #bf616a; }
+  .cm-s-base16-ocean-dark span.cm-bracket { color: #dfe1e8; }
+  .cm-s-base16-ocean-dark span.cm-tag { color: #bf616a; }
+  .cm-s-base16-ocean-dark span.cm-link { color: #b48ead; }
+  .cm-s-base16-ocean-dark span.cm-error { background: #bf616a; color: #a7adba; }
+
+  .cm-s-base16-ocean-dark .CodeMirror-activeline-background { background: #65737e30; }
+  .cm-s-base16-ocean-dark .CodeMirror-matchingbracket { text-decoration: underline; color: white !important; }
+  .cm-qualifier { color: #D08770; }
+</style>
+
 <style lang="stylus" scoped>
 .pans
   height: calc(100% - 40px)
@@ -202,13 +237,15 @@ export default {
   position: relative
 
 .pan
-  background-color: #f9f9f9
   position: absolute
   top: 0
   bottom: 0
   overflow: auto
+
+.pan:not(.output-pan)
+  background-color: #2b303b
   &.active-pan
-    background-color: white
+    background-color: #2b303b
 </style>
 
 <style lang="stylus">
@@ -227,6 +264,8 @@ export default {
   display: flex
   justify-content: space-between
   align-items: center
+  background-color: #2b303b
+  color: #65737f
   svg.svg-icon
     margin-left: 5px
     cursor: pointer
@@ -236,6 +275,9 @@ export default {
     outline: none
     &:hover
       color: #000
+
+.el-dropdown
+  color: #65737f
 
 .pans.resizing
   cursor: ew-resize
