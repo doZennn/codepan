@@ -2,14 +2,13 @@ import axios from 'axios'
 import notie from 'notie'
 
 export default async function (endpoint, token, errCb = () => {}) {
-  const params = {
-    // eslint-disable-next-line camelcase
-    access_token: token
+  const headers = {
+    Authorization: token ? `token ${token}` : undefined
   }
 
   try {
     const data = await axios.get(`https://api.github.com/${endpoint}`, {
-      params
+      headers
     }).then(res => res.data)
 
     return data
