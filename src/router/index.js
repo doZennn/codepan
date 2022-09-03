@@ -18,11 +18,6 @@ const router = new Router({
       component: EditorPage
     },
     {
-      name: 'gist',
-      path: '/gist/:gist',
-      component: EditorPage
-    },
-    {
       name: 'boilerplate',
       path: '/boilerplate/:boilerplate',
       component: EditorPage
@@ -31,6 +26,11 @@ const router = new Router({
       name: 'github-success',
       path: '/github_success',
       component: GitHubSuccess
+    },
+    {
+      name: 'gist',
+      path: '/:gist',
+      component: EditorPage
     },
     {
       path: '*',

@@ -285,14 +285,14 @@ export default {
         if (shouldUpdateGist) {
           this.editorSaved()
         } else {
-          this.$router.push(`/gist/${data.id}`)
+          this.$router.push(`/${data.id}`)
           if (token) {
             // Update gist id in the description of newly created gist
             axios(`https://api.github.com/gists/${data.id}`, {
               method: 'PATCH',
               headers,
               data: {
-                description: `Try it online! https://codepan.net/gist/${
+                description: `Try it online! https://pen.jozen.blue/${
                   data.id
                 }`
               }
