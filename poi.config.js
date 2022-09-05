@@ -4,10 +4,10 @@ const pkg = require('./package')
 
 const cdns = {
   BABEL_CDN: 'https://unpkg.com/@babel/standalone@7/babel.min.js',
-  PUG_CDN: 'https://cdn.jsdelivr.net/npm/browserified-pug@0.3.0/index.js',
-  CSSNEXT_CDN: 'https://cdn.jsdelivr.net/npm/browserified-postcss-cssnext@0.3.0/index.js',
-  POSTCSS_CDN: 'https://cdn.jsdelivr.net/npm/browserified-postcss@0.3.0/index.js',
-  TYPESCRIPT_CDN: 'https://cdn.jsdelivr.net/npm/browserified-typescript@0.3.0/index.js'
+  PUG_CDN: 'https://unpkg.com/@browserified/pug',
+  CSSNEXT_CDN: 'https://unpkg.com/@browserified/postcss-cssnext',
+  POSTCSS_CDN: 'https://unpkg.com/@browserified/postcss',
+  TYPESCRIPT_CDN: 'https://unpkg.com/@browserified/typescript'
 }
 
 module.exports = {
