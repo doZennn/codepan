@@ -2,7 +2,7 @@
   <repeat-icon
     class="svg-icon"
     @click="handleClick"
-    v-tippy="{title: 'View compiled'}">
+    v-tippy="{title: 'View compiled', theme: 'light'}">
   </repeat-icon>
 </template>
 
