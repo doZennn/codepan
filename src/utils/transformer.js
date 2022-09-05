@@ -41,13 +41,11 @@ async function loadBabel() {
   if (loadjs.isDefined('babel')) return
 
   progress.start()
-  const [, VuePreset, VueJSXMergeProps] = await Promise.all([
+  const [, VuePreset] = await Promise.all([
     asyncLoad(process.env.BABEL_CDN, 'babel'),
-    import(/* webpackChunkName: "babel-stuffs" */ 'babel-preset-vue/dist/babel-preset-vue'), // use umd bundle since we don't want to parse `require`
-    import(/* webpackChunkName: "babel-stuffs" */ '!raw-loader!./vue-jsx-merge-props')
+    import(/* webpackChunkName: "babel-stuffs" */ '@vue/babel-preset-jsx/dist/plugin.cjs.js'),
   ])
   transformers.set('VuePreset', VuePreset)
-  transformers.set('VueJSXMergeProps', VueJSXMergeProps)
   progress.done()
 }
 

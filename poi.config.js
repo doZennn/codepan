@@ -3,7 +3,7 @@ const repoLatestCommit = require('repo-latest-commit')
 const pkg = require('./package')
 
 const cdns = {
-  BABEL_CDN: 'https://unpkg.com/@babel/standalone/babel.min.js',
+  BABEL_CDN: 'https://unpkg.com/@babel/standalone@7/babel.min.js',
   PUG_CDN: 'https://cdn.jsdelivr.net/npm/browserified-pug@0.3.0/index.js',
   CSSNEXT_CDN: 'https://cdn.jsdelivr.net/npm/browserified-postcss-cssnext@0.3.0/index.js',
   POSTCSS_CDN: 'https://cdn.jsdelivr.net/npm/browserified-postcss@0.3.0/index.js',
@@ -25,9 +25,10 @@ module.exports = {
     })
   },
   production: {
-    sourceMap: false
+    sourceMap: false,
+    hash: true
   },
-  hash: true,
+  hash: false,
   homepage: '/',
   env: Object.assign({
     VERSION: `v${pkg.version}-${repoLatestCommit().commit.slice(0, 7)}`,

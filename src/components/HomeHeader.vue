@@ -16,7 +16,7 @@
           <el-dropdown-item command="react-jsx">React JSX</el-dropdown-item>
           <el-dropdown-item command="preact">Preact</el-dropdown-item>
           <el-dropdown-item command="vue">Vue</el-dropdown-item>
-          <el-dropdown-item command="vue-jsx">Vue JSX</el-dropdown-item>
+          <el-dropdown-item command="vue2-jsx">Vue2 JSX</el-dropdown-item>
           <el-dropdown-item command="rxjs">RxJS</el-dropdown-item>
           <el-dropdown-item command="hyperapp">Hyperapp</el-dropdown-item>
           <el-dropdown-item command="es-import">ES import</el-dropdown-item>

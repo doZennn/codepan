@@ -8,7 +8,7 @@ export const getHumanlizedTransformerName = transformer => {
     pug: 'Pug',
     markdown: 'Markdown',
     js: 'JavaScript',
-    'vue-jsx': 'Vue JSX',
+    'vue2-jsx': 'Vue2 JSX',
     babel: 'Babel',
     jsx: 'JSX', // @deprecated, use "babel"
     css: 'CSS',
@@ -32,7 +32,7 @@ export const getEditorModeByTransfomer = transformer => {
     pug: 'pug',
     markdown: 'markdown',
     js: 'jsx',
-    'vue-jsx': 'jsx',
+    'vue2-jsx': 'jsx',
     babel: 'jsx',
     jsx: 'jsx', // @deprecated, use "babel"
     css: 'css',

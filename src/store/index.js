@@ -154,7 +154,7 @@ const store = new Vuex.Store({
       if (
         transformer === 'babel' ||
         transformer === 'jsx' || // @deprecated, use "babel"
-        transformer === 'vue-jsx'
+        transformer === 'vue2-jsx'
       ) {
         await loadBabel()
       } else if (transformer === 'pug') {

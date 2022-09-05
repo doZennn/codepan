@@ -9,8 +9,7 @@ const defaultPresets = [
     }
   ],
   'es2016',
-  'es2017',
-  'stage-0'
+  'es2017'
 ]
 
 export async function js({ code, transformer }) {
@@ -21,7 +20,7 @@ export async function js({ code, transformer }) {
     transformer === 'jsx' /* @deprecated, use "babel" */
   ) {
     return window.Babel.transform(code, {
-      presets: [...defaultPresets, 'flow', 'react']
+      presets: [...defaultPresets, 'flow', 'react', ['stage-0', { decoratorsLegacy: true }]]
     }).code
   } else if (transformer === 'typescript') {
     const res = window.typescript.transpileModule(code, {
@@ -33,13 +32,10 @@ export async function js({ code, transformer }) {
     })
     console.log(res)
     return res.outputText
-  } else if (transformer === 'vue-jsx') {
+  } else if (transformer === 'vue2-jsx') {
     return window.Babel.transform(code, {
-      presets: [...defaultPresets, 'flow', transformers.get('VuePreset')]
-    }).code.replace(
-      /import [^\s]+ from ['"]babel-helper-vue-jsx-merge-props['"];?/,
-      transformers.get('VueJSXMergeProps')
-    )
+      presets: [...defaultPresets, 'flow', transformers.get('VuePreset'), ['stage-0', { decoratorsLegacy: true }]]
+    }).code
   } else if (transformer === 'reason') {
     const wrapInExports = code =>
       `;(function(exports) {\n${code}\n})(window.exports = {})`
