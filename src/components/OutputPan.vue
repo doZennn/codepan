@@ -292,9 +292,7 @@ export default {
               method: 'PATCH',
               headers,
               data: {
-                description: `Try it online! https://pen.jozen.blue/${
-                  data.id
-                }`
+                description: `Try it online! ${window.location.origin}/${data.id}`
               }
             }).catch(err => console.log(err))
           }
